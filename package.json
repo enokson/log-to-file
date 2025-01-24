@@ -1,0 +1,17 @@
+{
+  "name": "log-to-file",
+  "version": "1.0.0",
+  "description": "a node a write a stream of data to a log file on the groov Epic FS",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "joshua enokson <enokonprojects@protonmail.com>",
+  "license": "MIT",
+  "node-red" : {
+    "nodes": {
+      "log-to-file": "log-to-file.js",
+      "log-to-file-config": "log-to-file-config.js"
+    }
+  }
+}

@@ -1,0 +1,23 @@
+<script type="text/javascript">
+  RED.nodes.registerType('log-to-file-config',{
+      category: 'config',
+      defaults: {
+        dir: { value: "/home/dev/unsecured/logs", required: true },
+        maxFileCount: { value: 30, required: true, validate: RED.validators.number() },
+      },
+      label: function() {
+        return this.dir;
+      }
+  });
+</script>
+
+<script type="text/html" data-template-name="log-to-file-config">
+  <div class="form-row">
+    <label for="node-config-input-dir"><i class="fa fa-bookmark"></i> Directory</label>
+    <input type="text" id="node-config-input-dir">
+  </div>
+  <div class="form-row">
+    <label for="node-config-input-count"><i class="fa fa-bookmark"></i> Max File Count</label>
+    <input type="text" id="node-config-input-count">
+  </div>
+</script>

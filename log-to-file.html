@@ -1,0 +1,31 @@
+<script type="text/javascript">
+  RED.nodes.registerType('log-to-file',{
+    category: 'function',
+    color: '#a6bbcf',
+    defaults: {
+      name: { value: "" },
+      dir: {  value: "", type: "log-to-file-config", required: true },
+    },
+    inputs: 1,
+    outputs: 1,
+    icon: "file.svg",
+    label: function() {
+      return this.name||"log-to-file";
+    }
+  });
+</script>
+
+<script type="text/html" data-template-name="log-to-file">
+  <div class="form-row">
+      <label for="node-input-name"><i class="fa fa-tag"></i> Name</label>
+      <input type="text" id="node-input-name" placeholder="Name">
+  </div>
+  <div class="form-row">
+    <label for="node-input-dir"><i class="fa fa-tag"></i> Directory</label>
+    <input type="text" id="node-input-dir">
+  </div>
+</script>
+
+<script type="text/html" data-help-name="log-to-file">
+  <p>A node that logs msgs to the Groov Epic FS</p>
+</script>
